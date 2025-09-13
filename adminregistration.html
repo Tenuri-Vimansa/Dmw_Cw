@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Registration - Life Bloom Hospital</title>
+
+    <!-- Bootstrap Lux Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/lux/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+      .reg-header {
+        background: linear-gradient(135deg, #0d6efd, #001f3f);
+        color: white;
+        padding: 60px 20px;
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
+        text-align: center;
+      }
+
+      .reg-card {
+        max-width: 650px;
+        margin: -50px auto 40px auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+      }
+
+      .form-control {
+        border-radius: 10px;
+      }
+
+      .btn-register {
+        background-color: #0d6efd;
+        color: white;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-register:hover {
+        background-color: #001f3f;
+      }
+
+      footer {
+        background: #0d6efd;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: auto;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="reg-header">
+      <h1><i class="bi bi-person-badge"></i> Admin Registration</h1>
+      <p>Create a secure administrator account</p>
+    </div>
+
+    <!-- Registration Card -->
+    <div class="reg-card">
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+        </div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label">Role</label>
+          <select class="form-select" id="role">
+            <option selected disabled>Choose...</option>
+            <option>Super Admin</option>
+            <option>System Admin</option>
+            <option>Finance Admin</option>
+            <option>Staff Admin</option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="adminId" class="form-label">Create Admin ID</label>
+            <input type="text" class="form-control" id="adminId" placeholder="Choose an ID">
+          </div>
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Create password">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter password">
+        </div>
+
+        <button type="submit" class="btn btn-register w-100">Register</button>
+      </form>
+
+      <div class="text-center mt-3">
+        <p>Already have an account? <a href="admin-login.html" class="text-decoration-none text-primary">Login here</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Life Bloom Hospital. All Rights Reserved.
+    </footer>
+  </body>
+</html>
