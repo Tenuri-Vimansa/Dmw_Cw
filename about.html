@@ -108,32 +108,45 @@ main p {
     }
 }
 
-/* Footer */
-footer {
-    background-color: #0d6efd;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
+
+
+      footer {
+        width: 100%;
+        background-color: Blue !important;
+        color: white;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        margin-top: auto; /* push to bottom */
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      footer a:hover {
+        color: #ffc107;
+      }
+
+      footer h5 {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      footer p, footer li {
+        font-size: 0.95rem;
+      }
+
+      footer ul li {
+        margin-bottom: 8px;
+      }
+      /* Footer hover effect */
+footer:hover {
+  background-color: #0b5ed7; /* darker blue on hover */
+  transition: background-color 0.3s ease;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #ffc107; /* yellow accent */
-}
-
-footer p, footer li {
-    font-size: 0.9rem;
-}
-
-footer .bi {
-    font-size: 1.2rem;
-    margin-right: 5px;
-}
 
 /* Small text */
 .text-muted.small {
@@ -151,12 +164,6 @@ main > * {
     margin-bottom: 3rem;
 }
 
-/* Smooth hover for service cards */
-.services-row .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
 /* Links in nav */
 .nav-link {
     border-radius: 5px;
@@ -166,6 +173,20 @@ main > * {
 .nav-link {
     transition: all 0.3s ease;
 }
+  /* Ensure footer sticks nicely at the bottom */
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto; /* allows footer to stay at bottom if content is short */
+  }
+
 
     </style>
 
@@ -176,7 +197,7 @@ main > * {
     <!-- Header -->
     <header class="container-fluid p-0">
       <div class="d-flex justify-content-center align-items-center py-3 bg-primary">
-        <img src="WhatsApp Image 2025-09-06 at 17.55.24_03f28f43.jpg" alt="Logo" style="height:50px; margin-right:10px;">
+        <img src="img/WhatsApp Image 2025-09-06 at 17.55.24_03f28f43.jpg" alt="Logo" style="height:50px; margin-right:10px;">
         <span class="hospital-name text-white">Life Bloom Hospital</span>
       </div>
 
@@ -231,7 +252,7 @@ main > * {
     <!-- X-Ray Facilities -->
     <div class="col-md-3 mb-4">
       <div class="card h-100 shadow-sm border-0">
-        <img src="WhatsApp Image 2025-09-10 at 20.21.56_61a29630.jpg" class="card-img-top" alt="X-Ray Facilities">
+        <img src="img/WhatsApp Image 2025-09-10 at 20.21.56_61a29630.jpg" class="card-img-top" alt="X-Ray Facilities">
         <div class="card-body">
           <h6 class="fw-bold text-primary">X-Ray Facilities</h6>
           <p class="text-muted small">Our hospital is equipped with high-resolution digital X-Ray machines, enabling quick and accurate imaging for bones, chest, and soft tissues. We ensure minimal radiation exposure while providing detailed diagnostic results for both emergency and routine examinations</p>
@@ -242,7 +263,7 @@ main > * {
     <!-- Scan Facilities -->
     <div class="col-md-3 mb-4">
       <div class="card h-100 shadow-sm border-0">
-        <img src="WhatsApp Image 2025-09-10 at 20.23.01_072b0978.jpg" class="card-img-top" alt="Scan Facilities">
+        <img src="img/WhatsApp Image 2025-09-10 at 20.23.01_072b0978.jpg" class="card-img-top" alt="Scan Facilities">
         <div class="card-body">
           <h6 class="fw-bold text-primary">Scan Facilities</h6>
           <p class="text-muted small">We provide advanced CT and MRI scanning services for precise internal imaging. Our trained radiologists interpret scans promptly, aiding early detection and accurate treatment planning for conditions ranging from neurological disorders to complex internal injuries.</p>
@@ -253,7 +274,7 @@ main > * {
     <!-- Consultation Facilities -->
     <div class="col-md-3 mb-4">
       <div class="card h-100 shadow-sm border-0">
-        <img src="WhatsApp Image 2025-09-10 at 20.21.57_258c6911.jpg" class="card-img-top" alt="Consultation Facilities">
+        <img src="img/WhatsApp Image 2025-09-10 at 20.21.57_258c6911.jpg" class="card-img-top" alt="Consultation Facilities">
         <div class="card-body">
           <h6 class="fw-bold text-primary">Consultation Facilities</h6>
           <p class="text-muted small">Patients have access to experienced consultants across multiple specialties. Each consultation involves a thorough assessment of medical history, diagnostic reports, and personalized advice to ensure the most effective and patient-centered treatment plan.</p>
@@ -264,7 +285,7 @@ main > * {
     <!-- Operation Facilities -->
     <div class="col-md-3 mb-4">
       <div class="card h-100 shadow-sm border-0">
-        <img src="WhatsApp Image 2025-09-10 at 20.21.58_cc28551e.jpg" class="card-img-top" alt="Operation Facilities">
+        <img src="img/WhatsApp Image 2025-09-10 at 20.21.58_cc28551e.jpg" class="card-img-top" alt="Operation Facilities">
         <div class="card-body">
           <h6 class="fw-bold text-primary">Operation Facilities</h6>
           <p class="text-muted small">Our modern operation theatres are equipped with state-of-the-art surgical instruments, anesthesia systems, and sterile environments. With a dedicated surgical team, we ensure safe, precise, and efficient procedures for a wide range of medical and emergency surgeries.</p>
@@ -272,7 +293,58 @@ main > * {
       </div>
     </div>
   </div>
+  
+  </main>
 </main>
+
+
+    <!-- Footer -->
+ <!-- Footer -->
+<footer class="bg-primary text-white pt-5 pb-4 mt-5">
+  <div class="container-fluid px-5">
+    <div class="row gx-4 gy-4">
+      
+      <!-- About -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">About Life Bloom Hospital</h5>
+        <p>Life Bloom Hospital offers world-class healthcare with experienced doctors, modern facilities, and patient-centered care. Your health is our priority.</p>
+      </div>
+
+      <!-- Services -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">Our Services</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">General Consultation</li>
+          <li class="mb-2">Emergency Care</li>
+          <li class="mb-2">Cardiology</li>
+          <li class="mb-2">Pediatrics</li>
+          <li class="mb-2">Neurology</li>
+          <li class="mb-2">Dermatology</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="fw-bold mb-3">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>123 Health Street, Colombo, Sri Lanka</p>
+        <p><i class="bi bi-telephone-fill me-2"></i>+94 77 123 4567</p>
+        <p><i class="bi bi-envelope-fill me-2"></i>info@lifebloomhospital.lk</p>
+        <div class="mt-3">
+          <a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+    
+  
+</footer>
+          </div>
 
   </body>
 </html>

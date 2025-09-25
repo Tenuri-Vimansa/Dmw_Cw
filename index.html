@@ -14,31 +14,48 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body>
     <!-- Header -->
     <header class="container-fluid p-0">
       <div class="d-flex justify-content-center align-items-center py-3 bg-primary">
-        <img src="WhatsApp Image 2025-09-06 at 17.55.24_03f28f43.jpg" alt="Logo" style="height:50px; margin-right:10px;">
+        <img src="img/WhatsApp Image 2025-09-06 at 17.55.24_03f28f43.jpg" alt="Logo" style="height:50px; margin-right:10px;">
         <span class="hospital-name text-white">Life Bloom Hospital</span>
       </div>
 
-      <ul class="nav nav-tabs justify-content-center mt-2" id="navId" role="tablist">
-        <li class="nav-item">
-          <a href="#tab1" class="nav-link active" data-bs-toggle="tab">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab2" class="nav-link" data-bs-toggle="tab">All Doctors</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab3" class="nav-link" data-bs-toggle="tab">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab4" class="nav-link" data-bs-toggle="tab">Contact</a>
-        </li>
-      </ul>
+  <!-- Navigation with links to separate pages -->
+<ul class="nav nav-tabs justify-content-center mt-2">
+  <li class="nav-item">
+    <a href="index.html" class="nav-link active">Home</a>
+  </li>
+ 
+  <li class="nav-item">
+    <a href="about.html" class="nav-link">About Us</a>
+  </li>
+  <li class="nav-item">
+    <a href="contact.html" class="nav-link">Contact Page</a>
+  </li>
+
+  <li class="nav-item">
+    <a href="patientreg.html" class="nav-link">All Doctors</a>
+  </li>
+
+  <!-- ✅ Login Dropdown (placed outside Contact) -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+      Login
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="login_patient.html">Login as Patient</a></li>
+      <li><a class="dropdown-item" href="doctor registration.html">Login as Doctor</a></li>
+      <li><a class="dropdown-item" href="adminregistration.html">Login as Admin</a></li>
+    </ul>
+  </li>
+</ul>
+
+
     </header>
 
     
@@ -76,42 +93,52 @@
 
           <h4 class="specialty mt-5">Top Doctors to Book</h4>
           <div class="d-flex justify-content-center flex-wrap mt-3 top-doctors-row">
-            <div class="card m-3" style="width: 150px;">
-              <img src="img/WhatsApp Image 2025-09-07 at 10.07.16_8160abc2.jpg" class="card-img-top" alt="Dr. Anderson">
+            <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc1.html'">
+              <a href="doc1.html"></a>
+              <img src="img/WhatsApp Image 2025-09-07 at 10.07.16_8160abc2.jpg" class="card-img-top" alt="Dr. Anderson"  onclick="window.location.href='appointment_dr_smith.html'" 
+               style="cursor:pointer;">
               <div class="card-body text-center"><p class="card-text">Dr. Anderson William</p></div>
             </div>
 
-            <div class="card m-3" style="width: 150px;">
+            <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc2.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 10.07.17_b3479322.jpg" class="card-img-top" alt="Dr. Williamson Jake">
-              <div class="card-body text-center"><p class="card-text">Dr. Anderson William</p></div>
+              <div class="card-body text-center"><p class="card-text">Dr. Glenn Phillip</p></div>
             </div>
 
-             <div class="card m-3" style="width: 150px;">
+             <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc3.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 10.07.17_be23ac60.jpg" class="card-img-top" alt="Dr. Kendra Acahsa">
               <div class="card-body text-center"><p class="card-text">Dr. Kendra Acasha</p></div>
             </div>
 
-            <div class="card m-3" style="width: 150px;">
+            <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc4.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 11.32.29_6e8bc491.jpg" class="card-img-top" alt="Dr. David Fernando">
               <div class="card-body text-center"><p class="card-text">Dr. David Fernando</p></div>
             </div>
 
-             <div class="card m-3" style="width: 150px;">
+             <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc5.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 10.08.16_e9a8a9f3.jpg" class="card-img-top" alt="Dr. Jessica Swetha">
               <div class="card-body text-center"><p class="card-text">Dr. Jessica Swetha</p></div>
             </div>
 
-            <div class="card m-3" style="width: 150px;">
+            <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc6.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 11.32.28_303bf001.jpg" class="card-img-top" alt="Dr. Yuana Herkins">
               <div class="card-body text-center"><p class="card-text">Dr. Yuana Herkins</p></div>
             </div>
 
-            <div class="card m-3" style="width: 150px;">
+            <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc7.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 10.07.18_a1ffc727.jpg" class="card-img-top" alt="Dr. Harland Silva">
               <div class="card-body text-center"><p class="card-text">Dr. Harland Silva</p></div>
             </div>
 
-             <div class="card m-3" style="width: 150px;">
+             <div class="card m-3" style="width: 150px; cursor:pointer;" 
+              onclick="window.location.href='doc8.html'">
               <img src="img/WhatsApp Image 2025-09-07 at 11.32.29_86464b89.jpg" class="card-img-top" alt="Dr. Arendria Jernanz">
               <div class="card-body text-center"><p class="card-text">Dr. Arendria Jernanz</p></div>
             </div>
@@ -127,6 +154,7 @@
         <!-- All Doctors Tab -->
         <div class="tab-pane fade p-4" id="tab2" role="tabpanel">
           <h3>All Doctors</h3>
+          
           <p>List of doctors will go here.</p>
         </div>
 
@@ -239,3 +267,4 @@
         </div>
 
         <hr class="border-light mx-
+
