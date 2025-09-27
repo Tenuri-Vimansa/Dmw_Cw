@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .booking-card {
+            max-width: 850px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .booking-form-control,
+        .booking-form-select,
+        .booking-form-textarea {
+            height: 50px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+            padding: 0 10px;
+        }
+        
+        .booking-form-textarea {
+            height: auto;
+            padding-top: 10px;
+        }
+        
+        .booking-form-control:focus,
+        .booking-form-select:focus,
+        .booking-form-textarea:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+        
+        .booking-form-label {
+            font-weight: 500;
+            color: #ffffff;
+        }
+        
+        .btn-booking {
+            height: 50px;
+            font-size: 16px;
+            background-color: #ffffff;
+            color: #0d6efd;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            transition: 0.3s;
+        }
+        
+        .btn-booking:hover {
+            background-color: #eaf3ff;
+            transform: translateY(-2px);
+        }
+        
+        .input-group-text {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #ffffff;
+            width: 45px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="booking-card shadow">
+        <h2 class="text-center mb-4"><i class="bi bi-calendar-check-fill"></i> Book an Appointment</h2>
+        <form name="bookingForm" onsubmit="return validateBookingForm()">
+            <div class="row g-4">
+
+                <!-- Left side -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="booking-form-label">Full Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                            <input type="text" name="fullname" class="form-control booking-form-control" placeholder="Enter your full name">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="booking-form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                            <input type="email" name="email" class="form-control booking-form-control" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="booking-form-label">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                            <input type="tel" name="phone" class="form-control booking-form-control" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="booking-form-label">Select Doctor</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person-badge-fill"></i></span>
+                            <select name="doctor" class="form-select booking-form-select">
+                                <option value="">Choose a doctor</option>
+                                <optgroup label="Cardiology">
+                                    <option>Dr. Anderson</option>
+                                    <option>Dr. Williams</option>
+                                    <option>Dr. Thomas</option>
+                                    <option>Dr. Johnson</option>
+                                    <option>Dr. Martinez</option>
+                                </optgroup>
+                                <optgroup label="Neurology">
+                                    <option>Dr. Brown</option>
+                                    <option>Dr. Lee</option>
+                                    <option>Dr. Harris</option>
+                                    <option>Dr. Scott</option>
+                                    <option>Dr. Clark</option>
+                                </optgroup>
+                                <optgroup label="Pediatrics">
+                                    <option>Dr. Taylor</option>
+                                    <option>Dr. Miller</option>
+                                    <option>Dr. Adams</option>
+                                    <option>Dr. Garcia</option>
+                                    <option>Dr. Evans</option>
+                                </optgroup>
+                                <optgroup label="Dermatology">
+                                    <option>Dr. Swift</option>
+                                    <option>Dr. Bobby</option>
+                                    <option>Dr. Grande</option>
+                                    <option>Dr. Liam</option>
+                                    <option>Dr. Olivia</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="booking-form-label">Select Date</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-calendar-fill"></i></span>
+                            <input type="date" name="date" class="form-control booking-form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="booking-form-label">Message (optional)</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-chat-left-text-fill"></i></span>
+                            <textarea name="message" class="form-control booking-form-textarea" rows="3" placeholder="Leave a note or message"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-booking w-100 mt-4">Book Appointment</button>
+        </form>
+    </div>
+
+    <script>
+        function validateBookingForm() {
+            let form = document.forms["bookingForm"];
+            let fullname = form["fullname"].value;
+            let email = form["email"].value;
+            let phone = form["phone"].value;
+            let doctor = form["doctor"].value;
+            let date = form["date"].value;
+
+            if (fullname == "") {
+                alert("Full name must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (!email.includes("@")) {
+                alert("Email must contain '@'");
+                return false;
+            }
+
+            if (!email.includes(".")) {
+                alert("Email must contain '.'");
+                return false;
+            }
+
+            if (phone == "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+
+            if (doctor == "") {
+                alert("Please select a doctor");
+                return false;
+            }
+
+            if (date == "") {
+                alert("Please select a date");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
